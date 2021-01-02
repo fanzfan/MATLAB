@@ -9,3 +9,5 @@ function [A, B] = AF2DF(c, d, T)
     % 合并分式，输出结果
     [A, B] = residue(A, B, k);
 end
+
+% END
