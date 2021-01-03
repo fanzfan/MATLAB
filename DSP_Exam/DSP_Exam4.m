@@ -21,5 +21,5 @@ title('幅频特性曲线 DFT'); axis([-0.05 6.34 -1 10])
 % 下面开始验证
 % 我们做2000个点的DFT并且用plot折线绘出，观察其与figure(2)中图像是否一致
 figure(3)
-plot(abs(fft(x, 2000)))% 做2000个点的DFT并且用plot折线绘出
+stem(abs(fft(x, 2000)))% 做2000个点的DFT并且用plot折线绘出
 title('2000点FFT连线'); axis([-0.1 2001 -1 10])
