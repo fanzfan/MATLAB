@@ -1,5 +1,5 @@
 
-%% 瑞利信道 - 一发两收 MRC合并算法仿真
+%% 瑞利信道 - 一发两收 EGC 合并算法仿真
 
 %% 变量声明
 % M = 2，代表BPSK
@@ -14,9 +14,8 @@ EbN0dB = -20 : 2 : 20;
 %% 理论结果
 % 平均信噪比
 EbN0 = 10.^(EbN0dB/10);
-t = sqrt(EbN0 ./(1+EbN0));
-Pb = 1/8 * (1-t).^2 .* (t+1).*(t+2);
-semilogy(EbN0dB, Pb,'LineWidth', 2,'color','#77AC30');
+Pb = 0.5 * (1 - sqrt(1 - 1 ./ (1 + EbN0) .^ 2));
+semilogy(EbN0dB, Pb, 'LineWidth', 2);
 
 hold on
 
@@ -47,7 +46,7 @@ for i = 1:length(EbN0dB)
     [recSig(1,:), G(1,:)] = RayAWGN(modSig, EbN0dB(i), M);
     [recSig(2,:), G(2,:)] = RayAWGN(modSig, EbN0dB(i), M);
     % 合并比计算
-    A = conj(G);
+    A = conj(G) ./ abs(G);
     % 乘以合并系数
     recSig = recSig .* A;
     % 将两个信号叠加
@@ -57,7 +56,7 @@ for i = 1:length(EbN0dB)
 end
 semilogy(EbN0dB, errRate, 'r*','LineWidth', 0.7, 'MarkerSize' , 9);
 grid on
-title({'Plot', [num2str(len), '点瑞利信道MRC算法仿真结果']})
-legend('MRC 理论结果', '实际结果')
+title({'Plot', [num2str(len), '点瑞利信道EGC算法仿真结果']})
+legend('EGC 理论结果', '实际结果')
 xlabel('$$\frac{E_b}{N_o}\space (dB)$$', 'Interpreter', 'latex')
 ylabel('BER (对数坐标)')
