@@ -1,5 +1,5 @@
-%% KNN_FUN KNN算法匹配
-%   此处显示详细说明
+%% KNN_FUN KNN算法匹配样本与训练
+% outputArg1:样本匹配结果
 function [outputArg1] = KNN_fun(inputArg1, mu)
 %% 加载训练集
 P = load(['voice_PCA_' num2str(mu) '.csv']);

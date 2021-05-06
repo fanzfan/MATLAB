@@ -1,10 +1,14 @@
+%% 测试样本程序
+% 训练集已经通过训练程序产生
+% 为了方便处理，做fft将数据化为等长形式
+
 %% 加载训练集
 P1 = load('voice_PCA_0.9.csv');
 P2 = load('voice_PCA_0.8.csv');
 P3 = load('voice_PCA_0.7.csv');
 P4 = load('voice_PCA_0.5.csv');
 %% 初始化
-mu = [0.9 0.8 0.7 0.5];
+mu = 0.5 : 0.05 : 0.9;
 num = 58;
 fftPoints = 1024;
 
@@ -26,6 +30,7 @@ end
 
 %% PCA与KNN算法
 for i = 1 : length(mu)
+    [K(i), ~] = size(load(['voice_PCA_' num2str(mu(i)) '.csv']));
     test_PCA = PCA_K(abs(voice_fft), num, K(i));
     for j = 1 : num
         typ(j) = KNN_fun(test_PCA(:,j), mu(i));
@@ -34,7 +39,7 @@ for i = 1 : length(mu)
     %% 故障率
     disp(['mu = ' num2str(mu(i)) ' 情况下的故障率：' num2str(errNum(i) / num * 100) '%']);
 end
-disp(['真实情况下的故障率：' num2str(13 / 58) '%']);
+disp(['真实情况下的故障率：' num2str(13 / 58 * 100) '%']);
 plot(mu, errNum/num * 100,'Color', '#77AC30', 'LineWidth', 2);title('模型预测故障发生频率')
 hold on
 yline(13 / 58 * 100, '-.k', 'LineWidth', 1)
