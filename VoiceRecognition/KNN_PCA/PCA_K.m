@@ -2,7 +2,7 @@
 % inputArg1：待处理的信息
 % num：信息条数，也是文件个数
 % mu：阈值设定
-function [outputArg1] = PCA(inputArg1, num, mu)
+function [outputArg1] = PCA_K(inputArg1, num, K)
     X = inputArg1;
     % 零均值化
     X_zeroMean = X - mean(X);
@@ -12,12 +12,7 @@ function [outputArg1] = PCA(inputArg1, num, mu)
     [V, D] = eig(C);
     [d, ind] = sort(diag(D), 'descend');
     % 按特征值大小排序
+    Ds = D(ind, ind);
     Vs = V(:, ind);
-    % 根据阈值选择 降低的维数
-    for k = 1:length(d)
-        if (sum(d(1:k)) / sum(d) >= mu)
-            break;
-        end
-    end
-    outputArg1 = Vs(:, 1:k)' * X;
+    outputArg1 = Vs(:, 1:K)' * X;
 end

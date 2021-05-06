@@ -40,6 +40,6 @@ hold on
 yline(13 / 58 * 100, '-.k', 'LineWidth', 1)
 ylabel('错误率 %')
 axis([0.4 1 15 26])
-legend('')
+legend('模型预测故障率', '真实故障率')
 
 
