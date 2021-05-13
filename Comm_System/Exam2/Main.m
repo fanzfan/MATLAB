@@ -35,11 +35,11 @@ G = [1 0 0 0 1 1 1
     0 0 1 0 1 0 1
     0 0 0 1 0 1 1];
 % 汉明编码后序列
-dataHamming = bitand(data * G, 1);
+code = Hamming_Encoder(G, data);
 % 调制
-tempData = resize(dataHamming', 2, [])';
-tempData = bi2de(tempData, 'left-msb');
-modSig = PSKMod(tempData, M, 0);
+tempCode = resize(code', 2, [])';
+tempCode = bi2de(tempCode, 'left-msb');
+modSig = PSKMod(tempCode, M, 0);
 
 errC = @(err) 1 - err;
 for i = 1:length(EbN0dB2)
@@ -47,17 +47,8 @@ for i = 1:length(EbN0dB2)
     recData = PSKDemod(recSig, M, 0);
     recData = de2bi(recData, 'left-msb');
     recData = resize(recData', 7, [])';
-    % 校验子 S
-    S = bitand(H * recData', 1)';
-    S = bi2de(S, 'left-msb');
-    % 校验过程
-    for j = 1:length(S)
-        if (S(j) > 0)
-            recData(j, 8 - S(j)) = -recData(j, 8 - S(j)) + 1;
-        end
-    end
     % 最终得到的数据
-    finData = recData(:, 1:4);
+    finData = Hamming_Decoder(H, recData);
     [~, errRate(i)] = ErrRate(data, finData);
 end
 

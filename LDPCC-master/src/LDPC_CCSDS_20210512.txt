@@ -1,0 +1,20 @@
+date 20210512
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+1.5	   100	    4	      606	    37.09	 5.917969e-03	 4.000000e-02
+1.7	   100	    0	        0	    19.18	 0.000000e+00	 0.000000e+00
+1.9	   100	    0	        0	    16.65	 0.000000e+00	 0.000000e+00
+2.1	   100	    0	        0	     14.3	 0.000000e+00	 0.000000e+00
+date 20210512
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, date 20210512
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 4608, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER

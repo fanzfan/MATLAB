@@ -1,11 +1,10 @@
-
-t = -10:0.001:10;
-yt = (sinc(t));
-yt2 = sinc(t).*cos(t)./(1-t.^2);
-subplot(2,1,1);
-plot(t,yt);
-axis([-5 5 -0.5 1.2]);title('矩形基带信号频谱')
-
-subplot(2,1,2);
-plot(t,yt2);
-axis([-5 5 -0.5 1.2]);title('升余弦基带信号频谱')
+f = 8000;
+for i = 1 : 75
+    [y, fs] = audioread(['C:\Users\Vela\OneDrive\桌面\语音信号处理\PyTorch\MyDataset\关后备箱\' num2str(i) '.wav']);
+    y = y(1 : fs / f : length(y));
+    m = sum(y.^2) / length(y);
+    x = y(abs(y) > m);
+    %x = x - mean(x);
+    plot(x);
+    sound(x, f)
+end

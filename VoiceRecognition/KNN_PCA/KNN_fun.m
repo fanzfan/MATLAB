@@ -1,41 +1,18 @@
 %% KNN_FUN KNN算法匹配样本与训练
-% outputArg1:样本匹配结果
-function [outputArg1] = KNN_fun(inputArg1, mu)
-%% 加载训练集
-P = load(['voice_PCA_' num2str(mu) '.csv']);
-[L,~] = size(P);
-if(L > 1)
-    Distance = sum(abs(P - inputArg1).^2);
-else
-    Distance = abs(P - inputArg1).^2;
+% data：输入数据
+% K：指定KNN系数
+% result:样本匹配结果
+function [result] = KNN_fun(data, K, mu)
+    %% 加载训练集
+    P = load(['voice_PCA_' num2str(mu) '.csv']);
+    % 已知的数据分布情况
+    distribution = [ones(1, 16) 2 * ones(1, 15) 3 * ones(1, 15) 4 * ones(1, 24) 5 * ones(1, 12) 6 * ones(1, 28) 7 * ones(1, 18)];
+    % 范数计算
+    Distance = sum(abs(P - data).^2, 1);
+    % 排序，找到最小距离并输出
+    [~, ind] = sort(Distance);
+    K = K - 1 + mod(K, 2);
+    temp = tabulate(distribution(ind(1:K)));
+    [~, I] = max(temp(:, 3));
+    result = temp(I, 1);
 end
-sorted_Distance = sort(Distance);
-Min2_Distance = sorted_Distance(1:2);
-
-index = [find(abs(Distance - Min2_Distance(1)) < 0.00001) find(abs(Distance - Min2_Distance(2)) < 0.00001)];
-
-if(index(1)>=1 && index(1) <= 16)
-    outputArg1 = 1;
-else if(index(1)>=17 && index(1) <= 31)
-        outputArg1 = 2;
-    else if(index(1)>=32 && index(1) <= 46)
-            outputArg1 = 3;
-        else if(index(1)>=47 && index(1) <= 70)
-                outputArg1 = 4;
-            else if(index(1)>=71 && index(1) <= 82)
-                    outputArg1 = 5;
-                else if(index(1)>=83 && index(1) <= 110)
-                        outputArg1 = 6;
-                    else if(index(1)>=111 && index(1) <= 128)
-                            outputArg1 = 7;
-                        else
-                            outputArg1 = 0;
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-end
-

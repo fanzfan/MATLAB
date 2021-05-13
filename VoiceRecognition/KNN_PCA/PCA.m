@@ -1,9 +1,8 @@
 % 一维PCA实现
-% inputArg1：待处理的信息
+% X：待处理的信息
 % num：信息条数，也是文件个数
 % mu：阈值设定
-function [outputArg1] = PCA(inputArg1, num, mu)
-    X = inputArg1;
+function [outputArg1] = PCA(X, num, mu)
     % 零均值化
     X_zeroMean = X - mean(X);
     % 协方差矩阵
