@@ -20,3 +20,103 @@ EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
 1.7	   100	    1	      156	    23.99	 1.523438e-03	 1.000000e-02
 1.9	   100	    0	        0	    17.69	 0.000000e+00	 0.000000e+00
 2.1	   100	    0	        0	    14.69	 0.000000e+00	 0.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+1.5	   100	    7	      945	     40.1	 9.228516e-03	 7.000000e-02
+1.7	   100	    1	      120	    22.01	 1.171875e-03	 1.000000e-02
+1.9	   100	    0	        0	    16.84	 0.000000e+00	 0.000000e+00
+2.1	   100	    0	        0	    14.61	 0.000000e+00	 0.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+1.5	   100	    1	      142	    30.82	 1.386719e-03	 1.000000e-02
+1.7	   100	    1	      154	    25.36	 1.503906e-03	 1.000000e-02
+1.9	   100	    0	        0	    17.65	 0.000000e+00	 0.000000e+00
+2.1	   100	    0	        0	    14.27	 0.000000e+00	 0.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+1.5	   100	    0	        0	     8.72	 0.000000e+00	 0.000000e+00
+1.7	   100	    0	        0	     8.15	 0.000000e+00	 0.000000e+00
+1.9	   100	    0	        0	     7.33	 0.000000e+00	 0.000000e+00
+2.1	   100	    0	        0	     6.62	 0.000000e+00	 0.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+1.5	   100	    0	        0	     9.07	 0.000000e+00	 0.000000e+00
+1.7	   100	    0	        0	     8.03	 0.000000e+00	 0.000000e+00
+1.9	   100	    0	        0	     7.47	 0.000000e+00	 0.000000e+00
+2.1	   100	    0	        0	     6.88	 0.000000e+00	 0.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 200, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+ -5	   100	  100	    31075	      200	 3.034668e-01	 1.000000e+00
+ -4	   100	  100	    28588	      200	 2.791797e-01	 1.000000e+00
+ -3	   100	  100	    25748	      200	 2.514453e-01	 1.000000e+00
+ -2	   100	  100	    21987	      200	 2.147168e-01	 1.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 1, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+ -5	   100	  100	    30628	        1	 2.991016e-01	 1.000000e+00
+ -4	   100	  100	    27904	        1	 2.725000e-01	 1.000000e+00
+ -3	   100	  100	    25453	        1	 2.485645e-01	 1.000000e+00
+ -2	   100	  100	    22208	        1	 2.168750e-01	 1.000000e+00
+ -1	   100	  100	    18742	        1	 1.830273e-01	 1.000000e+00
+  0	   100	  100	    14761	        1	 1.441504e-01	 1.000000e+00
+  1	   100	  100	    11039	        1	 1.078027e-01	 1.000000e+00
+  2	   100	  100	     7265	        1	 7.094727e-02	 1.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 1, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+ -5	   100	  100	    30585	        1	 2.986816e-01	 1.000000e+00
+ -4	   100	  100	    28268	        1	 2.760547e-01	 1.000000e+00
+ -3	   100	  100	    25368	        1	 2.477344e-01	 1.000000e+00
+ -2	   100	  100	    22166	        1	 2.164648e-01	 1.000000e+00
+ -1	   100	  100	    18539	        1	 1.810449e-01	 1.000000e+00
+  0	   100	  100	    15041	        1	 1.468848e-01	 1.000000e+00
+  1	   100	  100	    11091	        1	 1.083105e-01	 1.000000e+00
+  2	   100	  100	     7318	        1	 7.146484e-02	 1.000000e+00
+date 20210513
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+ -5	   100	  100	    31133	       20	 3.040332e-01	 1.000000e+00
+ -4	   100	  100	    28528	       20	 2.785937e-01	 1.000000e+00
+ -3	   100	  100	    25696	       20	 2.509375e-01	 1.000000e+00
+ -2	   100	  100	    22226	       20	 2.170508e-01	 1.000000e+00
+ -1	   100	  100	    16868	       20	 1.647266e-01	 1.000000e+00
+  0	   100	   93	     6046	    19.79	 5.904297e-02	 9.300000e-01
+  1	   100	    0	        0	    11.83	 0.000000e+00	 0.000000e+00
+  2	   100	    0	        0	     7.15	 0.000000e+00	 0.000000e+00

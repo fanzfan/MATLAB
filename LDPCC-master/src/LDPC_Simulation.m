@@ -12,9 +12,9 @@ clc;clear all;close all;
 
 %%
 % Simulation parameter setting
-EbN0_dB = 1.5:0.2:2.2;                       
+EbN0_dB = 1:1:9;                       
 FRAMES_NUM = 100;                         
-MAX_ITER_NUM = 200;                      
+MAX_ITER_NUM = 20;                      
 MAX_ERROR_FRAME = 200;                   
 bitError = zeros(1,length(EbN0_dB));     
 BER = bitError;                          
@@ -60,24 +60,12 @@ for nEbN0 = 1:length(EbN0_dB)
         encodeData = mod(message*G,2);
         %%
         % modulate
-        transmitSignal = 1 - 2*encodeData;   % 0-1;1--1
-        transmitSignalPower = sqrt(var(transmitSignal));
-        transmitSignal = transmitSignal/transmitSignalPower; %Normalization
-        %%
-        % AWGN Channel, the relationship between SNR and EbN0
-        %%
-        % 
-        % $$SNR = \frac{{{E_b}}}{{{N_0}}} + 2{\log _{10}}^M + 2{\log _{10}}^{RATE}$$
-        % 
-        
-        SNR_dB = EbN0_dB((nEbN0)) + 10*log10(2)+10*log10(RATE);
-        SNR = 10^(SNR_dB/10);
-        noise = randn(1,length(transmitSignal));
-        noise = noise/sqrt(SNR);     
-        receiveSignal = transmitSignal + noise;
+        transmitSignal = 2*encodeData - 1;   % 0-1;1--1
+        SNR_dB = log10(10.^(EbN0_dB(nEbN0) / 10) * 2) * 10;
+        receiveSignal = awgn(transmitSignal, SNR_dB, 'measured');
         %%
         % punching
-        receiveSignal(end-1*SIZE_M+1:end-0*SIZE_M) = 0;
+        %receiveSignal(end-1*SIZE_M+1:end-0*SIZE_M) = 0;
         %%
         % decode
         [iterNum,recoverData] = ...      

@@ -7,8 +7,9 @@ len = 50000;
 data = randi([0 M - 1], 1, len);
 data = de2bi(data, 'left-msb');
 data = resize(data, [], 4);
+Hamming_Frame = len / 4;
 % 信噪比范围 (dB)
-EbN0dB = 0:0.5:10;
+EbN0dB = -10:0.5:10;
 errRate = zeros(1, length(EbN0dB));
 
 %% 计算理论误码率
@@ -24,7 +25,7 @@ hold on
 
 %% 理论计算
 % EbN0转换，为了适应校验位的加入，EbN0需要一点变化
-EbN0dB2 = log10(10.^(EbN0dB / 10) * (7/4)) * 10;
+EbN0dB_Hamming = log10(10.^(EbN0dB / 10) * (7/4)) * 10;
 % 监督矩阵H
 H = [1 1 1 0 1 0 0
     1 1 0 1 0 1 0
@@ -51,6 +52,7 @@ for i = 1:length(EbN0dB2)
     finData = Hamming_Decoder(H, recData);
     [~, errRate(i)] = ErrRate(data, finData);
 end
+
 
 % 绘出误比特率数据
 semilogy(EbN0dB, errRate, '*-', 'LineWidth', 1);

@@ -1,10 +1,10 @@
-function [dec, success] = LDPC_Decoder(receiveWord, sigma, H, IterNum)
+function [dec, success] = LDPC_decoder2(receiveWord, sigma, H, IterNum)
     [M, N] = size(H);
     K = N - M;
     rate = K / N;
     H = int8(H);
 
-    maxRowDegree = max(sum(H'));
+    maxRowDegree = max(sum(transpose(H)));
     maxColumnDegree = max(sum(H));
 
     VNLen = zeros(1, N);

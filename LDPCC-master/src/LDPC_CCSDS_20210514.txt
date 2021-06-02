@@ -1,0 +1,77 @@
+date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+  1	   100	    4	        4	    12.28	 3.906250e-05	 4.000000e-02
+  2	   100	    0	        0	     7.13	 0.000000e+00	 0.000000e+00
+  3	   100	    0	        0	     4.79	 0.000000e+00	 0.000000e+00
+  4	   100	    0	        0	     3.49	 0.000000e+00	 0.000000e+00
+  5	   100	    0	        0	      2.7	 0.000000e+00	 0.000000e+00
+  6	   100	    0	        0	     2.09	 0.000000e+00	 0.000000e+00
+  7	   100	    0	        0	     1.88	 0.000000e+00	 0.000000e+00
+  8	   100	    0	        0	     1.38	 0.000000e+00	 0.000000e+00
+  9	   100	    0	        0	     1.05	 0.000000e+00	 0.000000e+00
+date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+  1	   100	    2	        5	    12.56	 4.882813e-05	 2.000000e-02
+  2	   100	    0	        0	      6.9	 0.000000e+00	 0.000000e+00
+  3	   100	    0	        0	      4.9	 0.000000e+00	 0.000000e+00
+  4	   100	    0	        0	      3.7	 0.000000e+00	 0.000000e+00
+  5	   100	    0	        0	     2.66	 0.000000e+00	 0.000000e+00
+  6	   100	    0	        0	     2.06	 0.000000e+00	 0.000000e+00
+  7	   100	    0	        0	     1.86	 0.000000e+00	 0.000000e+00
+  8	   100	    0	        0	      1.3	 0.000000e+00	 0.000000e+00
+  9	   100	    0	        0	     1.05	 0.000000e+00	 0.000000e+00
+date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+  1	   100	    0	        0	    12.65	 0.000000e+00	 0.000000e+00
+  2	   100	    0	        0	      7.2	 0.000000e+00	 0.000000e+00
+  3	   100	    0	        0	     4.93	 0.000000e+00	 0.000000e+00
+  4	   100	    0	        0	     3.58	 0.000000e+00	 0.000000e+00
+  5	   100	    0	        0	     2.68	 0.000000e+00	 0.000000e+00
+  6	   100	    0	        0	      2.1	 0.000000e+00	 0.000000e+00
+  7	   100	    0	        0	     1.87	 0.000000e+00	 0.000000e+00
+  8	   100	    0	        0	     1.26	 0.000000e+00	 0.000000e+00
+  9	   100	    0	        0	     1.05	 0.000000e+00	 0.000000e+00
+date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+  1	   100	    0	        0	     3.53	 0.000000e+00	 0.000000e+00
+  2	   100	    0	        0	     2.66	 0.000000e+00	 0.000000e+00
+  3	   100	    0	        0	     2.14	 0.000000e+00	 0.000000e+00
+  4	   100	    0	        0	     1.89	 0.000000e+00	 0.000000e+00
+  5	   100	    0	        0	      1.3	 0.000000e+00	 0.000000e+00
+  6	   100	    0	        0	     1.08	 0.000000e+00	 0.000000e+00
+  7	   100	    0	        0	        1	 0.000000e+00	 0.000000e+00
+  8	   100	    0	        0	        1	 0.000000e+00	 0.000000e+00
+  9	   100	    0	        0	        1	 0.000000e+00	 0.000000e+00
+date 20210514
+ LDPCC in CCSDS standard section3(2006)
+Information Length = 1024, Information Rate = 5.000000e-01, decoding function is ldpcdecoderllr
+MAX-iteration = 20, 
+-------------------------------
+ table name in Chinese
+EbN0	 T_Frame	 E_Frames	 E_Bits	 A_IterNums	 BER	 FER
+  1	   100	  100	    10350	       20	 1.010742e-01	 1.000000e+00
+  2	   100	  100	     8830	       20	 8.623047e-02	 1.000000e+00
+  3	   100	  100	     7644	       20	 7.464844e-02	 1.000000e+00
+  4	   100	  100	     6968	       20	 6.804688e-02	 1.000000e+00

@@ -15,8 +15,6 @@ for rowH = 1:size(H, 1)
     HRowNum{rowH} = find(r_mark == rowH);
 end
 [~,N] = size(H);
-
-% 预分配内存
 vl = receiveSignal;
 decoderData = zeros(1,N);
 uml = zeros(1,sum(HColNum));

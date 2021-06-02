@@ -64,8 +64,8 @@ for iter=1:MAX_ITER_NUM
         ColStart = ColStart+HColNum(L);
     end
     % decision decoding
-    decoderData(qn0_1>=0) = 0;
-    decoderData(qn0_1<0) = 1;
+    decoderData(qn0_1>=0) = 1;
+    decoderData(qn0_1<0) = 0;
     if(mod(H*decoderData',2)==0)
         break;
     end
