@@ -1,8 +1,9 @@
 %% 变量声明
+close all;clear all;
 % M = 4，代表QPSK
 M = 4;
 % 数据点个数
-len = 50000;
+len = 5000000;
 % 随机生成的原始数据
 data = randi([0 M - 1], 1, len);
 data = de2bi(data, 'left-msb');
@@ -18,10 +19,6 @@ berQ = qfunc(sqrt(2 * 10.^(EbN0dB / 10)));
 % 理论结果展示
 semilogy(EbN0dB, berQ, 'LineWidth', 1);
 hold on
-% % 汉明码纠错
-% berQ = (16 - 1) *qfunc(sqrt(3 * 2 * 10.^((EbN0dB - 1) / 10)));
-% % 理论结果展示
-% semilogy(EbN0dB, berQ, 'LineWidth', 1);
 
 %% 理论计算
 % EbN0转换，为了适应校验位的加入，EbN0需要一点变化
@@ -43,8 +40,8 @@ tempCode = bi2de(tempCode, 'left-msb');
 modSig = PSKMod(tempCode, M, 0);
 
 errC = @(err) 1 - err;
-for i = 1:length(EbN0dB2)
-    recSig = AWGN2(EbN0dB2(i), modSig, M);
+for i = 1:length(EbN0dB_Hamming)
+    recSig = AWGN2(EbN0dB_Hamming(i), modSig, M);
     recData = PSKDemod(recSig, M, 0);
     recData = de2bi(recData, 'left-msb');
     recData = resize(recData', 7, [])';

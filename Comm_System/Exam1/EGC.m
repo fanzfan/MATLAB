@@ -60,8 +60,12 @@ for i = 1:length(EbN0dB)
 end
 semilogy(EbN0dB, errRate2, 'LineWidth', 2);
 semilogy(EbN0dB, errRate, 'r*', 'LineWidth', 0.7, 'MarkerSize', 9);
+load 'MGC_err.csv'
+load 'MGC_err_th.csv'
+semilogy(EbN0dB, MGC_err_th,'color', '#77AC30', 'LineWidth', 2);
+semilogy(EbN0dB, MGC_err, '*','color', '#7E2F8E', 'LineWidth', 0.7, 'MarkerSize', 9);
 grid on
 title({'Plot', [num2str(len), '点瑞利信道EGC算法仿真结果']})
-legend('EGC 理论结果', '未分集仿真结果', 'EGC 仿真结果')
+legend('EGC 理论结果', '未分集仿真结果', 'EGC 仿真结果', 'MGC理论结果', 'MGC仿真结果')
 xlabel('$$\frac{E_b}{N_o}\space (dB)$$', 'Interpreter', 'latex')
 ylabel('BER (对数坐标)')

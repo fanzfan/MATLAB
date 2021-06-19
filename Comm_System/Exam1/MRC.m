@@ -28,7 +28,7 @@ hold on
 %% 仿真结果
 
 % bpsk调制后信号
-modSig = bpskMod1(data);
+modSig = bpskMod(data);
 % 接收到的信号，提前声明，加快循环速度
 recSig = zeros(2, len);
 % 信号通过瑞利信道衰减 Gk，提前声明，加快循环速度
@@ -56,7 +56,7 @@ for i = 1:length(EbN0dB)
     [~, errRate2(i)] = ErrRate(data, bpskDemod(recSig(1,:)));
     % 将两个信号叠加
     finSig = recSig(1, :) + recSig(2, :);
-    finData = bpskDemod1(finSig);
+    finData = bpskDemod(finSig);
     [~, errRate(i)] = ErrRate(data, finData);
 end
 
