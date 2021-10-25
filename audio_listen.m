@@ -1,7 +1,7 @@
 
 
-fs=60000;
+fs=48000;
 dt = 1/fs;
-time = (1:100000)*dt;
-sine = sin(16000*2*pi*time);
+time = (1:30000)*dt;
+sine = sin(200*2*pi*time);
 sound(sine,fs);

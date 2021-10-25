@@ -1,7 +1,7 @@
-% 一维PCA实现，这里将MEL谱得到的9维数据压缩成1维返回
+% 一维PCA实现
 % inputArg1：待处理的信息
 % num：信息条数，也是文件个数
-% mu：阈值设定
+% K：需要的维度
 function [outputArg1] = PCA_K(inputArg1, num, K)
     X = inputArg1;
     % 零均值化
